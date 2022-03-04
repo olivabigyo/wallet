@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Crypto wallet display site">
+    <title>My Wallet</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css"
+        integrity="sha512-oc9+XSs1H243/FRN9Rw62Fn8EtxjEYWHXRvjS43YtueEewbS6ObfXcJNyohjHqVKFPoXXUxwc+q1K7Dee6vv9g=="
+        crossorigin="anonymous" />
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery cdn -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap js plugins cdn -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"
+        integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw=="
+        crossorigin="anonymous"></script>
+    <!-- page SCRIPTS -->
+    <script defer src="js/main.js"></script>
+</head>
+
+<body class="whitesand">
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-theme bg-theme sticky-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                Lori
+            </a>
+            <ul class="navbar-nav ml-auto">
+                <!-- darklight toggler -->
+                <li class="nav-item">
+                    <div class="custom-control custom-switch nav-link ml-5">
+                        <input type="checkbox" class="custom-control-input" id="themeSwitch">
+                        <label class="custom-control-label" for="themeSwitch"><i
+                                class="fas fa-moon i-theme"></i></label>
+                    </div>
+                </li>
+                <!-- I put it here to avoid the flashing -->
+                <script src="js/theme-toggler.js"></script>
+            </ul>
+        </div>
+    </nav>
+    <!-- END NAVIGATION -->
+    <!-- HEADER -->
+    <header class="bg-theme py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-2">
+                    <h1 class="brand">My Wallet</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+    <!-- MAIN AREA -->
+    <section class="container py-2 my-4">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card card-theme">
+                    <div class="table-responsive">
+                        <table class="table table-theme table-striped table-hover">
+                            <thead class="thead bg-theme">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Crypto</th>
+                                    <th>CHF</th>
+                                </tr>
+                            </thead>
+                            <tbody id="valueTable">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-2 my-4 flexible">
+        <div class="row">
+            <div class="col-lg-6 mb-2">
+                <a href="#" id="details" class="btn btn-theme btn-block">
+                    <i class="fas fa-folder"></i> Details
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="container py-2 my-4 flexible hidden">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-theme">
+                    <div class="card-header card-header-theme">
+                        <h4>Portfolio</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-theme table-striped table-hover">
+                            <thead class="thead bg-theme">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Crypto</th>
+                                    <th>Address</th>
+                                    <th>Balance</th>
+                                    <th>Price CHF</th>
+                                    <th>Value CHF</th>
+                                </tr>
+                            </thead>
+                            <tbody id="portfolioTable">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END MAIN AREA -->
+    <!-- FOOTER -->
+    <footer class="bg-theme pt-2 mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col my-2">
+                    <p class="lead text-center text-inverse-50">Created By | Olivabigyo | &copy; <span>2022</span> ---
+                        All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+</body>
