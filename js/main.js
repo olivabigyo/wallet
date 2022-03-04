@@ -82,13 +82,13 @@ for (let i = 0; i < results.length; i++) {
     total += results[i]['ValueCHF'];
     valueTable.innerHTML += `
     <tr>
-        <td>${i}</td>
+        <td>${i+1}</td>
         <td>${results[i]['Crypto']}</td>
-        <td>${results[i]['ValueCHF']}</td>
+        <td>${results[i]['ValueCHF'].toFixed(2)}</td>
     </tr>`;
     portfolioTable.innerHTML += `
     <tr>
-        <td>${i}</td>
+        <td>${i+1}</td>
         <td>${results[i]['Crypto']}</td>
         <td>${results[i]['Address']}</td>
         <td>${results[i]['Balance']}</td>
@@ -100,7 +100,7 @@ valueTable.innerHTML += `
     <tr>
         <td>Total</td>
         <td></td>
-        <td>${total}</td>
+        <td><strong>${total.toFixed(2)}</strong></td>
     </tr>`;
 }
 main();
